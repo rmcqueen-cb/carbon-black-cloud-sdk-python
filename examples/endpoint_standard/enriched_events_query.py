@@ -37,9 +37,9 @@ def main():
     parser = build_cli_parser()
     parser.add_argument("--query", "-q", type=str, help="Query string for the search", default=None)
     parser.add_argument("--include", "-i", action='append', type=str,
-                        help="Specifies included event field values, as key=value")
+                        help="Specifies included event field criteria values, as key=value")
     parser.add_argument("--exclude", "-x", action='append', type=str,
-                        help="Specifies excluded event field values, as key=value")
+                        help="Specifies excluded event field criteria values, as key=value")
     parser.add_argument("--fields", "-f", action='append', type=str, help="Specifies names of fields to include")
     parser.add_argument("--numrows", "-n", type=int, help="Maximum number of rows to be returned", default=None)
     parser.add_argument("--group", "-g", type=str, help="Field to group by, either device_id or process_sha256",
